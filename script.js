@@ -10,6 +10,8 @@ const pinterest = document.querySelector('.pinterest')
 const twitter = document.querySelector('.twitter')
 const whatsapp = document.querySelector('.whatsapp')
 const linkedin = document.querySelector('.linkedin')
+const reload = document.querySelector('.reload-quote')
+
 
 
 
@@ -25,6 +27,7 @@ if (todos) {
 // !Event Listeners
 btn.addEventListener('click', createItemUpdateArray);
 list.addEventListener('click', checkListen);
+reload.addEventListener('click', generateQuote);
 
 // !Functions
 
@@ -123,7 +126,7 @@ function generateRandomIndex(length) {
     return Math.floor(Math.random() * length);
 }
 
-(async function generateQuote() {
+async function generateQuote() {
 
     let url = "https://type.fit/api/quotes";
 
@@ -139,8 +142,8 @@ function generateRandomIndex(length) {
             quoteHolder.innerText = quotes[index1].text;
             authorHolder.innerText = quotes[index1].author;
         });
-})();
-
+};
+generateQuote();
 (function socialShare() {
     let postText = `'Hey there Check this todo app`
 

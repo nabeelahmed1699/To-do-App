@@ -163,6 +163,22 @@ h1 {
     justify-self: flex-end;
 }
 
+.quotes-container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reload-quote {
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reload-quote:hover {
+    transform: scale(1.2);
+}
+
 .author {
     align-self: center;
     font-size: 12px;
