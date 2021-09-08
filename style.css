@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+:root {
+    /* colors */
+    --primary-color: #212738;
+    --seconday-color: hsl(194, 73%, 62%);
+    --seconday-color-alt: hsl(194, 73%, 47%);
+    --text-color: #edf2ef;
+    /* Typography */
+    --font-family: 'Poppins', sans-serif;
+    --biggest-font-size: 5rem;
+    --biger-font-size: 3.5rem;
+    --big-font-size: 2.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.15rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+    --text-line-height: 2rem;
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+        --biggest-font-size: 7.5rem;
+        --biger-font-size: 4.5rem;
+        --big-font-size: 4rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--primary-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    position: relative;
+}
+
+h1 {
+    font-size: var(--biger-font-size);
+    justify-self: flex-start;
+    margin: 5rem 0;
+    text-decoration: underline;
+}
+
+.todo-container {
+    width: 50%;
+    max-width: 400px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+.input {
+    width: 100%;
+    position: relative;
+}
+
+.todo-input {
+    width: 100%;
+    background: var(--text-color);
+    padding: 10px 20px;
+    outline: 0;
+    border: 0;
+    font-size: var(--normal-font-size);
+    color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-4px, 3.2px);
+    padding: 8px 20px;
+    background: var(--seconday-color);
+    border: 0;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--seconday-color-alt);
+}
+
+.todo-list {
+    padding: 2rem 1rem 0 1rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.todo-item {
+    width: 100%;
+    background: var(--seconday-color);
+    color: var(--text-line-height);
+    padding: 5px 20px;
+    position: relative;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in;
+}
+
+.icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.far {
+    font-size: 1.5rem;
+    transition: 0.2s;
+}
+
+.trash {
+    color: hsl(0, 98%, 46%);
+}
+
+.trash:hover {
+    color: hsl(0, 98%, 36%);
+}
+
+.check {
+    color: hsl(120, 100%, 32%);
+}
+
+.check:hover {
+    color: hsl(120, 100%, 22%);
+}
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(80deg);
+    opacity: 0;
+}
+
+.quotes-container {
+    width: 50%;
+    max-width: 600px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.author {
+    align-self: center;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.share-buttons {
+    width: 50%;
+    margin: 1.2rem auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-icon {
+    color: var(--text-color);
+    font-size: var(--h3-font-size);
+    transition: 500ms;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.fa-facebook-f {
+    color: #1877f2;
+}
+
+.fa-twitter {
+    color: #1da1f2;
+}
+
+.fa-linkedin-in {
+    color: #0077b5;
+}
+
+.fa-whatsapp {
+    color: #25d366;
+}
+
+.fa-pinterest {
+    color: #e60023;
+}
