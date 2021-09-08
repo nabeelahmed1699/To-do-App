@@ -15,8 +15,12 @@ const linkedin = document.querySelector('.linkedin')
 
 
 var todos = JSON.parse(localStorage.getItem('todos'));
+if (todos) {
 
-todos.map(todo => createItem(todo))
+    todos.map(todo => createItem(todo))
+} else {
+    todos = [];
+}
 
 // !Event Listeners
 btn.addEventListener('click', createItemUpdateArray);
