@@ -154,7 +154,7 @@ h1 {
 }
 
 .quotes-container {
-    margin-top: 15vmin;
+    margin: 15vmin auto;
     width: 50%;
     max-width: 600px;
     text-align: center;
