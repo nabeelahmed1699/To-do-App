@@ -157,6 +157,8 @@ h1 {
     margin: 15vmin auto;
     width: 50%;
     max-width: 600px;
+    min-width:340px;
+    min-height:450px;
     text-align: center;
     display: flex;
     flex-direction: column;
