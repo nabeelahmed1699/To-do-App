@@ -46,7 +46,6 @@ body {
     background: var(--primary-color);
     color: var(--text-color);
     font-family: var(--font-family);
-    position: relative;
 }
 
 h1 {
@@ -155,13 +154,13 @@ h1 {
 }
 
 .quotes-container {
+    margin-top: 15vmin;
     width: 50%;
     max-width: 600px;
-    position: fixed;
-    bottom: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
+    justify-self: flex-end;
 }
 
 .author {
@@ -171,16 +170,37 @@ h1 {
 }
 
 .share-buttons {
-    width: 50%;
+    min-height: 300px;
     margin: 1.2rem auto;
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    padding: 10px 20px;
+    box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.5);
+    transition: 500ms;
+}
+
+@media screen and (max-width: 600px) {
+    .share-buttons {
+        min-height: unset;
+        width: 50%;
+        top: unset;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row;
+        background: var(--primary-color);
+    }
 }
 
 .social-icon {
     color: var(--text-color);
-    font-size: var(--h3-font-size);
+    font-size: var(--h2-font-size);
     transition: 500ms;
 }
 
@@ -188,22 +208,22 @@ h1 {
     transform: scale(1.2);
 }
 
-.fa-facebook-f {
+.facebook {
     color: #1877f2;
 }
 
-.fa-twitter {
+.twitter {
     color: #1da1f2;
 }
 
-.fa-linkedin-in {
+.linkedin {
     color: #0077b5;
 }
 
-.fa-whatsapp {
+.whatsapp {
     color: #25d366;
 }
 
-.fa-pinterest {
+.pinterest {
     color: #e60023;
 }
