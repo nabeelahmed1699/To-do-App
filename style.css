@@ -218,6 +218,7 @@ h1 {
         left: 50%;
         transform: translateX(-50%);
         flex-direction: row;
+        justify-content: space-between;
         background: var(--primary-color);
     }
 }
