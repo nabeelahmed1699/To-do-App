@@ -1,6 +1,6 @@
 // !Selectors
 const input = document.querySelector('#todo-input');
-const btn = document.querySelector('.btn');
+const btn = document.querySelector('#add');
 const list = document.querySelector('.todo-list');
 const quoteHolder = document.querySelector('.quote');
 const authorHolder = document.querySelector('.author');
