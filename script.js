@@ -4,6 +4,7 @@ const btn = document.querySelector('.btn');
 const list = document.querySelector('.todo-list');
 const quoteHolder = document.querySelector('.quote');
 const authorHolder = document.querySelector('.author');
+const clipboardBtn = document.querySelector('.clipboard');
 // Social media icons
 const facebook = document.querySelector('.facebook')
 const pinterest = document.querySelector('.pinterest')
@@ -28,6 +29,7 @@ if (todos) {
 btn.addEventListener('click', createItemUpdateArray);
 list.addEventListener('click', checkListen);
 reload.addEventListener('click', generateQuote);
+clipboardBtn.addEventListener('click', copyQuote);
 
 // !Functions
 
@@ -140,7 +142,7 @@ async function generateQuote() {
 
 
             quoteHolder.innerText = quotes[index1].text;
-            authorHolder.innerText = quotes[index1].author;
+            authorHolder.innerText = `By : ${quotes[index1].author}`;
         });
 };
 generateQuote();
@@ -155,3 +157,18 @@ generateQuote();
     twitter.setAttribute('href', `https://twitter.com/share?url=${url}&text=${postText}&via=${'@nabeel_mufti'}&hashtags=[hashtags]`);
     pinterest.setAttribute('href', `https://pinterest.com/pin/create/bookmarklet/?url=${url}&description=${postText}`);
 })();
+
+
+function copyQuote() {
+    /* Get the text field */
+    var copyText = quoteHolder;
+
+    /* Select the text field */
+    // copyText.select();
+    // copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.innerText);
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.innerText);
+}

@@ -157,8 +157,8 @@ h1 {
     margin: 15vmin auto;
     width: 50%;
     max-width: 600px;
-    min-width:340px;
-    min-height:450px;
+    min-width: 340px;
+    /* min-height: 450px; */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -171,13 +171,19 @@ h1 {
     align-items: center;
 }
 
-.reload-quote {
+.quotes-container div p {
+    cursor: pointer;
+}
+
+.reload-quote,
+.clipboard {
     margin-left: 10px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.reload-quote:hover {
+.reload-quote:hover,
+.clipboard:hover {
     transform: scale(1.2);
 }
 
@@ -244,4 +250,45 @@ h1 {
 
 .pinterest {
     color: #e60023;
+}
+
+
+/* Tootlip */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
